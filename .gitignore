@@ -1,0 +1,86 @@
+# =====================================================================
+# DermaVision AI - .gitignore (one file for the whole project)
+# Put it in the top folder, next to frontend/, backend/ and ml/.
+# =====================================================================
+
+# ---------- Secrets (NEVER commit) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+kaggle.json
+client_secret*.json
+credentials*.json
+service-account*.json
+
+# ---------- Operating system ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ---------- Editors ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---------- Frontend (React / Vite) ----------
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- Backend (Python / FastAPI) ----------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---------- Databases and user uploads (this is patient data) ----------
+*.db
+*.sqlite
+*.sqlite3
+backend/media/
+
+# ---------- Machine learning (datasets, trained models, outputs) ----------
+backend/weights/*
+!backend/weights/.gitkeep
+ml/data/
+ml/runs/
+ml/outputs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npy
+*.npz
+.ipynb_checkpoints/
+
+# ---------- Logs and archives ----------
+logs/
+*.log
+*.zip
+*.tar
+*.tar.gz

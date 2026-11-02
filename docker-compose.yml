@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: dermavision
+      POSTGRES_PASSWORD: dermavision   # change for any real deployment
+      POSTGRES_DB: dermavision
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dermavision"]
+      interval: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    env_file:
+      - path: ./backend/.env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg2://dermavision:dermavision@db:5432/dermavision
+      MODEL_PATH: /app/weights/dermavision_effnet_b0.pt
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/weights:/app/weights:ro
+      - ./backend/media:/app/media
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

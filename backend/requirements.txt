@@ -1,0 +1,18 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+pydantic[email]>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+PyJWT>=2.8
+bcrypt>=4.1
+Pillow>=10.3
+numpy>=1.26
+opencv-python-headless>=4.9
+anthropic>=0.40
+google-auth>=2.30
+requests>=2.31
+# ML inference (see Dockerfile for the smaller CPU-only wheel)
+torch>=2.3
+torchvision>=0.18
