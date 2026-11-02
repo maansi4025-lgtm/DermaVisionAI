@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Simulated skin lesion image</title>
+  <desc id="desc">Illustrated skin surface with a highlighted simulated lesion, for demonstration only.</desc>
+  <defs>
+    <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#f3d7c8"/><stop offset="1" stop-color="#dfb39f"/></linearGradient>
+    <radialGradient id="lesion"><stop stop-color="#624139"/><stop offset=".62" stop-color="#8e5c4b"/><stop offset="1" stop-color="#a87866" stop-opacity=".35"/></radialGradient>
+    <pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="4" cy="7" r="1" fill="#fff" opacity=".2"/><circle cx="19" cy="21" r="1.2" fill="#9d6e5c" opacity=".12"/></pattern>
+  </defs>
+  <rect width="800" height="520" rx="24" fill="url(#skin)"/>
+  <rect width="800" height="520" rx="24" fill="url(#grain)"/>
+  <ellipse cx="417" cy="258" rx="112" ry="93" fill="url(#lesion)"/>
+  <ellipse cx="417" cy="258" rx="143" ry="121" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="7 9" opacity=".8"/>
+  <rect x="28" y="28" width="744" height="464" rx="18" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+  <rect x="28" y="438" width="744" height="54" rx="0 0 18 18" fill="#172033" fill-opacity=".72"/>
+  <text x="52" y="472" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="600">SIMULATED IMAGE · DEMONSTRATION ONLY</text>
+</svg>
